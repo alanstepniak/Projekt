@@ -1,0 +1,26 @@
+@mixin flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flexAlign($justify, $align) {
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin menuList {
+    list-style: none;
+    background-color: white;
+    .menuItem {
+        display: inline-block;
+        margin: 0 20px;
+        font-size: initial;
+        text-transform: uppercase;
+        
+        a {
+            color: $secondaryColor;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+}

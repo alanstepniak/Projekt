@@ -1,0 +1,40 @@
+%btn {
+    border-radius: 30px;
+    display: inline-block;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0;
+    color: white;
+}
+
+.btnPrimary {
+    @extend %btn;
+    background-color: $primaryColor;
+
+    &:hover {
+        background-color: $buttonColor;
+    }
+}
+
+.btnSecondary {
+    @extend %btn;
+    background-color:$buttonColor;
+
+    &:hover {
+        background-color: $primaryColor;
+    }
+}
+
+.btnForm {
+    @extend %btn;
+    background-color: white;
+    color: $secondaryColor;
+    font-weight: 700;
+    text-align: center;
+
+    &:hover {
+        background-color: $buttonColor;
+        color: white;
+    }
+}

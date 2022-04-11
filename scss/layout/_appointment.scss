@@ -1,0 +1,59 @@
+.appointment {
+    padding: 0;
+    @include flexbox;
+
+    .desktopBackground {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 40%;
+        display: none;
+    }
+
+    form {
+        width: 100%;
+        background-color: $primaryColor;
+        padding: 80px 40px;
+
+        .appointmentMessage {
+            width: 100%;
+            display: none;
+
+            &.error {
+                color: red;
+                display: block;
+            }
+
+            &.send {
+                color: white;
+                display: block;
+            }
+        }
+    }
+
+    @media all and (min-width: $large) {
+        .desktopBackground {
+            display: block;
+        }
+
+        form {
+            width: 60%;
+            padding: 80px;
+            @include flexbox;
+            justify-content: space-between;
+
+            input,
+            select {
+                width: 49%;
+            }
+
+            input[type="submit"] {
+                width: auto;
+            }
+
+            textarea {
+                margin:60px 0;
+            }
+        }
+    }
+}

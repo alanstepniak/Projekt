@@ -1,0 +1,51 @@
+.contact {
+    color: white;
+    background-color: $primaryColor;
+
+    .sectionHeader {
+        color: white;
+
+        h2 {
+            color: inherit;
+        }
+    }
+
+    .contactData {
+        padding: 25px 0;
+        margin-bottom: 30px;
+
+        .contactItem {
+            @include flexbox;
+            align-items: center;
+            text-transform: uppercase;
+            justify-content: center;
+
+            .imgHolder {
+                width: 15%;
+                margin-right: 10px;
+                text-align: center;
+
+                img {
+                    width: 30px;
+                }
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        @media all and (min-width: $medium) {
+            .contactItem {
+                justify-content: flex-start;
+            }
+        }
+    }
+    .contactForm {
+        padding: 25px 0;
+    }
+}

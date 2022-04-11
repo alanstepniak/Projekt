@@ -1,0 +1,19 @@
+.pageFooter {
+    text-align: center;
+    padding: 30px 0;
+
+    img {
+        width: 100px;
+    }
+    .footerNav {
+        .menu {
+            
+            @include menuList;
+            padding: 20px 0;
+
+            .menuItem {
+                padding: 15px 0;
+            }
+        }
+    }
+}

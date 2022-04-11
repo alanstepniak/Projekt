@@ -1,0 +1,97 @@
+.mainHeader {
+    height: 700px;
+    @include flexbox;
+    @include flexAlign(flex-start, center);
+    position: relative;
+
+    .headerDescription {
+        color: $secondaryColor;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $secondaryFont;
+        font-weight: 700;
+    }
+
+    h1 {
+        color: 1e2528;
+        font-size: 50px;
+    }
+
+    .mainHeaderContent {
+        color: $secondaryTextColor;
+    }
+
+    .buttonsPanel {
+        margin-top: 40px;
+
+        .reserve {
+            display: inline-block;
+            padding: 14px 20px;
+            color: white;
+            background-color: $primaryColor;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $buttonColor;
+            }
+        }
+
+        .watch {
+            color: $secondaryColor;
+            display: inline-block;
+            margin-left: 15px;
+            text-decoration: none;
+
+            i {
+                height: 40px;
+                width: 40px;
+                border: 1px solid $secondaryColor;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 40px;
+                margin-right: 10px;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+    .headerBg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 30%;
+        z-index: 10000;
+        display: none;
+    }
+    .headerFlowers {
+        max-width: 8%;
+        position: absolute;
+        left: 0;
+        top: 35%;
+        z-index: -1;
+    }
+
+    @media all and (min-width: $extraLarge) {
+        .headerBg {
+            max-width: 40%;
+        }
+    }
+
+    @media all and (min-width: $large) {
+        .mainHeaderHolder {
+            width: 60%;
+        }
+        .headerBg {
+            display: block;
+        }
+    }
+
+    @media all and (max-width:$extraSmall) {
+        .buttonsPanel {
+            .reserve, 
+            .watch {
+                margin: 0;
+            }
+        }
+    }
+}
